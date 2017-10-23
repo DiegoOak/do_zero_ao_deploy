@@ -324,6 +324,34 @@ def editar_tarefa(id_, tarefa):
 ```
 :heavy_check_mark: Temos um modelo pronto e os testes passando!
 
+
+Primeiro passo é checar o que foi feito até agora:
+```bash
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	modelo.py
+	test_modelo.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+Vemos dois arquivos não rastreados, precisamos avisar ao controle de versão que monitore estes arquivos.
+
+`$ git add modelo.py test_modelo.py`
+
+:floppy_disk: Vamos salvar uma versão do programa neste ponto!
+
+`git commit -m "adicionado modelo"`
+
+:octocat: Por fim envie ao github a versão atualizada do projeto.
+
+`git push`
+
 Consegue imaginar algum teste para melhorar a qualidade do nosso modelo? Talvez alguma validação, ou algo que deixamos passar. Talvez deriamos refatorar as operações com tarefas para um módulo separado do modelo.
 
 Sinta-se livre para adicionar estas funcionalidades, mas tente seguir nosso modelo de desenvolvimento guida por testes.

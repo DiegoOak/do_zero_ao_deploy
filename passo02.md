@@ -119,11 +119,11 @@ Vemos dois arquivos não rastreados, precisamos avisar ao controle de versão qu
 
 `$ git add Pipfile Pipfile.lock`
 
-Agora vamos marcar esta versão como salva.
+:floppy_disk: Agora vamos marcar esta versão como salva.
 
 `git commit -m "adionando dependências do projeto"`
 
-Por fim envie ao github a versão atualizada do projeto.
+:octocat: Por fim envie ao github a versão atualizada do projeto.
 
 `git push`
 
