@@ -61,7 +61,7 @@ deve se tornar
 Também temos como requisito que toda tarefa tem um identificador único.
 
 Vamos escrever um teste para isto:
-```
+```python
 def test_toda_tarefa_tem_identificador_unico():
     tarefa1 = Tarefa('titulo', 'descrição')
     tarefa2 = Tarefa('titulo', 'descrição')
@@ -177,7 +177,7 @@ Nosso cliente também pediu que a listagem de tarefas deve apresentar primeiro a
 
 Então vamos novamente pro arquivo de teste, escrever um código para esta regra e nos guiar a partir dele para desenvolver nosso código.
 
-```
+```python
 def test_ordem_tarefas():
     memdb.clear()
     tarefa1 = Tarefa('titulo 1', 'descrição', True)  # tarefa já finalizada
@@ -193,11 +193,13 @@ def test_ordem_tarefas():
 
 O código para ordenar as tarefas é o seguinte, primeiro no topo do arquivo vamos importar uma função para nos auxiliar chamada attrgetter, que uma função que executa o mesmo que uma chamada de `objeto.algumacoisa`.
 
-`from operator import attrgetter`
+```python
+from operator import attrgetter
+```
 
 e a nova versão ordenada da listagem de tarefas:
 
-```
+```python
 def listar_tarefas():
     return sorted(memdb.values(), key=attrgetter('status'))
 ```
@@ -320,7 +322,7 @@ def editar_tarefa(id_, tarefa):
     editado.descricao = tarefa.descricao or editado.descricao
     editado.status = tarefa.status
 ```
-:heavy_check_mark: temos um modelo pronto e os testes passando!
+:heavy_check_mark: Temos um modelo pronto e os testes passando!
 
 Consegue imaginar algum teste para melhorar a qualidade do nosso modelo? Talvez alguma validação, ou algo que deixamos passar. Talvez deriamos refatorar as operações com tarefas para um módulo separado do modelo.
 
