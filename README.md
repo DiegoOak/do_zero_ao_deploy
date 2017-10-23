@@ -38,9 +38,9 @@ Ainda estão previstos alguns bonus como autenticação, CI(integração contín
 
 [Passo 4: Desenvolvimento guiado por testes](passo04.md)
 
-[Passo 5: Definindo o modelo](passo05.md)
-
 [Bonus 0: Integração contínua](bonus00.md)
+
+[Passo 5: Definindo o modelo](passo05.md)
 
 [Passo 6: Criando uma tarefa](passo06.md)
 

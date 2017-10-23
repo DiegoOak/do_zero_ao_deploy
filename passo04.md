@@ -1,5 +1,5 @@
 # Desenvolvimento guiado por testes
 
-[Ir para o passo 5 :arrow_right:](passo05.md)
+[Ir para o bonus 0 :arrow_right:](bonus00.md)
 
 [:leftwards_arrow_with_hook: Voltar ao README ](README.md)
