@@ -95,7 +95,7 @@ $ git config --local user.name githubusername
 ## Referências
 
 - [pip quickstart](https://pip.pypa.io/en/stable/quickstart/)
-- [python para zumbis](https://www.youtube.com/channel/UCripRddD4BnaMcU833ExuwA)
+- [python download](http://python.org/download)
 - [explain git with d3](http://onlywei.github.io/explain-git-with-d3/#)
 - [Uma referência visual do git](http://marklodato.github.io/visual-git-guide/index-pt.html)
 - [Learn git branching](https://learngitbranching.js.org/)
