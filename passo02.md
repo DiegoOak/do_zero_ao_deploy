@@ -4,6 +4,8 @@
 
 O [flask](http://flask.pocoo.org/) é um micro framework web bastante conhecido por sua arquitetura minimalista.
 
+Para instalar o flask, utilize o comando `pipenv install flask`
+
 ```bash
 $ pipenv install flask
 Creating a virtualenv for this project…
@@ -48,7 +50,7 @@ Neste momento deu diretório deve estar assim:
 
 Vamos testar nossa instalção então?
 
-```python
+```bash
 $ python3
 Python 3.6.2 (default, Jul 20 2017, 03:52:27)
 [GCC 7.1.1 20170630] on linux
@@ -60,7 +62,7 @@ ModuleNotFoundError: No module named 'flask'
 >>>
 ```
 
-Se entramos no python e tentamos importar a biblioteca flask, um erro é retornado dizendo que o módulo não foi encontrado.
+:scream: Se entramos no python e tentamos importar a biblioteca flask, um erro é retornado dizendo que o módulo não foi encontrado.
 
 Acontece que instalamos o flask somente no ambiente virtual. Para entrarmos no ambiente virtual digite `pipenv shell`.
 
@@ -125,7 +127,7 @@ Por fim envie ao github a versão atualizada do projeto.
 
 `git push`
 
-Parabéns! Como um chef de cozinha, você já preparou suas ferramentas, daqui pra frente vamos cozinhar!
+:sunglasses: Parabéns! Como um chef de cozinha, você já preparou suas ferramentas, daqui pra frente vamos cozinhar!
 
 [Ir para o passo 3 :arrow_right:](passo03.md)
 
