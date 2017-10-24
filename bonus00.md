@@ -17,7 +17,7 @@ Utilize sua conta do github para cadastrar no travis.
 
 Seus projetos estarão listados da seguinte maneira
 
-![listagem projetos](projetos_travis.pnprojetos travisg)
+![listagem projetos](projetos_travis.png "projetos travis")
 
 Escolha o projeto todoapp e habilite a integração contínua.
 
