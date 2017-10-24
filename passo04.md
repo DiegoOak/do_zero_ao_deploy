@@ -4,20 +4,20 @@ Desenvolvimento guiado por testes(Test Driven Development) é uma técnica de de
 
 É um ciclo de desenvolvimento que segue os seguintes passos:
 
-1 - Adicione um teste
+**1 - Adicione um teste**
 
 Normalmente analisamos alguma funcionalidade que desejamos implementar ou validar e escrevemos um teste que será executado automaticamente relacionado aquela funcionalidade.
 Ainda que uma funçãoi/classe não exista, devemos escrever o comportamento esperado da mesma.
 
-2 - Verifique se algum teste quebrou
+**2 - Verifique se algum teste quebrou**
 
 Neste ponto devemos verificar se os testes passam a falhar(os antigos e o que você acabou de escrever)
 
-3 - Escreva código
+**3 - Escreva código**
 
 Escreva código necessário para que seu teste seja contemplado, mas evite escrever muito além do que necessário.
 
-4 - Refatore seu código
+**4 - Refatore seu código**
 
 Com os testes passando, analise se é possível alguma refatoração.
 
