@@ -19,9 +19,9 @@ Escreva código necessário para que seu teste seja contemplado, mas evite escre
 
 **4 - Refatore seu código**
 
-**5 - Repita o código**
-
 Com os testes passando, analise se é possível alguma refatoração.
+
+**5 - Vá para o passo 1**
 
 ![Círculo do TDD](tdd.png "Ciclo do tdd")
 

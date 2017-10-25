@@ -18,6 +18,8 @@ def test_define_tarefa():
     assert tarefa.descricao == 'descrição'
     assert tarefa.status is False
 ```
+Vamos agora utilizar o comando `pytest` para verificar se os testes estão ok.
+
 :x: Os testes falham pois ainda não temos uma tarefa definida. Guiado pelo teste, vamos escrever algum código.
 
 Qual é o mínimo de código que escrevo para que estes testes passem?
@@ -25,6 +27,9 @@ Qual é o mínimo de código que escrevo para que estes testes passem?
 Vamos criar outro arquivo chamado `modelo.py` com o seguinte conteúdo.
 
 ```python
+from modelo import Tarefa
+
+
 class Tarefa:
 
     def __init__(self, titulo, descricao, status):
@@ -33,9 +38,13 @@ class Tarefa:
         self.status = status
 ```
 
+Execute `pytest` novamente.
+
 :heavy_check_mark: OK, o código está funcionando e testado, vamos continuar desenvolvendo o que foi proposto.
 
 Próximo requisito foi "o status é algo opcional na criação da tarefa e por padrão é False"
+
+Vamos escrever mais um teste no arquivo de testes.
 
 ```python
 def test_status_nao_obrigatorio():
@@ -56,11 +65,14 @@ deve se tornar
 
 `def __init__(self, titulo, descricao, status=False)`
 
+Esta é a maneira com que o python considere este parâmetro como opcional.
+
 :heavy_check_mark: Rode novamente os testes e veja que tudo voltou a funcionar!
 
 Também temos como requisito que toda tarefa tem um identificador único.
 
 Vamos escrever um teste para isto:
+
 ```python
 def test_toda_tarefa_tem_identificador_unico():
     tarefa1 = Tarefa('titulo', 'descrição')
@@ -112,6 +124,16 @@ def listar_tarefas():
 
 Um detalhe importante aqui é que devo adicionar um dicionário no meu módulo com o nome de memdb.
 
+```
+memdb = {}
+```
+
+:: Também não posso esquecer de adicionar as importações das funções no arquivo de teste.
+
+```
+from modelo import Tarefa, listar_tarefas, memdb
+```
+
 Nesse momento o código de vocês devem estar assim:
 
 Código
@@ -126,10 +148,10 @@ class Tarefa:
     id = 1
 
     def __init__(self, titulo, descricao, status=False):
-        self.id = Tarefa.id
         self.titulo = titulo
         self.descricao = descricao
         self.status = status
+        self.id = Tarefa.id
         Tarefa.id += 1
 
 
@@ -141,6 +163,8 @@ def listar_tarefas():
 Testes
 
 ```python
+from modelo import Tarefa, listar_tarefas, memdb
+
 
 def test_define_tarefa():
     tarefa = Tarefa('titulo', 'descrição', False)
@@ -220,9 +244,11 @@ def test_criar_tarefa():
     assert len(memdb) > 0
 ```
 
-:x: Não se esqueça de rodar os testes e checar se temos problemas.
+:x: Não se esqueça de rodar os testes(`pytest`) e checar se temos problemas.
 
 Vamos escrever o código da funcionalidade:
+
+Voltamos ao código para criar a funcionalidade.
 
 ```python
 def criar_tarefa(titulo, descricao, status=False):
@@ -232,6 +258,8 @@ def criar_tarefa(titulo, descricao, status=False):
 ```
 
 :heavy_check_mark: Testes passando novamente! Mas ainda precisamos editar, remover e recuperar uma tarefa.
+
+:warning: Não esqueça de fazer as importações das funções no arquivo de teste.
 
 Vamos tentar remover então uma tarefa? Primeiro escrevemos os testes.
 
@@ -252,6 +280,8 @@ Temos testes falhando, vamos ao código.
 def remover_tarefa(id_):
     del memdb[id_]
 ```
+
+Neste código recebemos uma id e a removemos do dicionário. Está lembrado lá do capítulo sobre python? Se não lembrar volte e leia novamente.
 
 Os testes estarem passando, não quer dizer que está tudo ok, mas sim que tenho confiança que aquilo que foi testado está ok. E se a tarefa não existir?
 
@@ -321,6 +351,7 @@ def editar_tarefa(id_, tarefa):
     editado.titulo = tarefa.titulo or editado.titulo
     editado.descricao = tarefa.descricao or editado.descricao
     editado.status = tarefa.status
+    return editado
 ```
 :heavy_check_mark: Temos um modelo pronto e os testes passando!
 
@@ -334,8 +365,8 @@ Your branch is up-to-date with 'origin/master'.
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	modelo.py
-	test_modelo.py
+    modelo.py
+    test_modelo.py
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```

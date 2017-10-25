@@ -39,7 +39,7 @@ Aqui podemos observar que foi criado um ambiente virtual e a instalação da bib
 
 Dois novos arquivos foram criados para controle das depêndencias, `Pipfile` e `Pipfile.lock`.
 
-Neste momento deu diretório deve estar assim:
+Neste momento seu diretório deve estar assim:
 ```
 .
 ├── LICENSE

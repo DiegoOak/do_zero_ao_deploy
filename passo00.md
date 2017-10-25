@@ -66,7 +66,11 @@ O primeiro passo para desenvolvimento do nosso aplicativo web é cria-lo utiliza
 
 Aproveitando esta escolha, como o Github é grátis e também o mais conhecido, vamos hospedar o projeto lá(vai ajudar com algumas integrações mais tarde.)
 
-Preencha os campos como visto na fotografia abaixo:
+Aperte o botão novo_repositório
+
+![novo repositório](novo_repositorio.png " Novo repositório")
+
+Preencha os campos como visto na imagem abaixo:
 
 ![novo repositório](novorepo.png "Novo repositório")
 
