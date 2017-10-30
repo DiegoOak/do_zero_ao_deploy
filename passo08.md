@@ -50,6 +50,6 @@ Vamos assegurar que este caso está previsto escrevendo um teste.
 :heavy_check_mark: Mais uma funcionalidade feita e testada! Parabéns! Vamos continuar...
 
 
-[Ir para o passo 9 :arrow_right:](passo9.md)
+[Ir para o passo 9 :arrow_right:](passo09.md)
 
 [:leftwards_arrow_with_hook: Voltar ao README ](README.md)
