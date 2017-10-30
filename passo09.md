@@ -1,30 +1,29 @@
-# Detalhando tarefas
+# Entregando tarefas
 
-Como a listagem de tarefas não apresenta a descrição, devemos fornecer uma maneira de consultar individualmente uma tarefa
-para maiores detalhes.
+Só falta mais uma coisa para nossa "TODO list" estar completa. Precisamos ser capazes de  marcar uma tarefa como concluída.
 
 ```python
-
-def test_detalhando_tarefa():
+def test_entregando_tarefas():
     memdb.clear()
     tarefa = Tarefa('titulo', 'descrição')
     memdb[tarefa.id] = tarefa
     with app.test_client() as c:
-        resp = c.get('/task/{}'.format(tarefa.id))
-        assert resp.status_code == 200
+        resp = c.put('/task/{}'.format(tarefa.id), data={'status': True})
         data = json.loads(resp.data.decode('utf-8'))
-        assert data['titulo'] == 'titulo'
-        assert data['descricao'] == 'descrição'
+        assert resp.status_code == 200
+        assert data['status'] == 'True'
 ```
 
-:x: Com os testes falhando, vamos escrever o código necessário desta funcionalidade.
+E como fazer isto funcionar?
 
-```python
-
-@app.route('/task/<int:id_tarefa>', methods=['GET'])
-def detalhar(id_tarefa):
+```
+@app.route('/task/<int:id_tarefa>', methods=['PATCH', 'PUT'])
+def editar(id_tarefa):
     try:
-        tarefa = recuperar_tarefa(id_tarefa)
+        t = Tarefa(request.form['titulo'],
+                   request.form['descricao'],
+                   request.form['status'])
+        tarefa = editar_tarefa(id_tarefa, t)
         return jsonify({
             'id': tarefa.id,
             'titulo': tarefa.titulo,
@@ -33,23 +32,11 @@ def detalhar(id_tarefa):
         })
     except KeyError:
         return jsonify({'error': 'task not found'}), 404
+
 ```
-
-:heavy_check_mark: OK! Os testes estão passando, mas e se eu procurar uma tarefa não existente?
-
-```python
-
-def test_erro_ao_detalhar_tarefa():
-    memdb.clear()
-    with app.test_client() as c:
-        resp = c.get('/task/42')
-        assert resp.status_code == 404
-```
-Vamos assegurar que este caso está previsto escrevendo um teste.
-
-:heavy_check_mark: Mais uma funcionalidade feita e testada! Parabéns! Vamos continuar...
+:heavy_check_mark: Mais uma funcionalidade feita e testada! Parabéns! Vamos coloca-la no ar?
 
 
-[Ir para o passo 10 :arrow_right:](passo10.md)
+[Ir para o passo 11 :arrow_right:](passo11.md)
 
 [:leftwards_arrow_with_hook: Voltar ao README ](README.md)
