@@ -53,6 +53,6 @@ def test_listar_tarefa_com_conteudo():
 
 :heavy_check_mark: E isto, não esqueça de verifcar os testes! Agora temos uma listagem das nossas tarefas.
 
-[Ir para o passo 8 :arrow_right:](passo08.md)
+[Ir para o passo 7 :arrow_right:](passo07.md)
 
 [:leftwards_arrow_with_hook: Voltar ao README ](README.md)

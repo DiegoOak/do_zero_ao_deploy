@@ -41,6 +41,6 @@ def test_erro_ao_remover_tarefa():
 
 :heavy_check_mark: Tudo funcionando? Ainda falta detalhar uma tarefa e editar uma tarefa.
 
-[Ir para o passo 9 :arrow_right:](passo09.md)
+[Ir para o passo 8 :arrow_right:](passo08.md)
 
 [:leftwards_arrow_with_hook: Voltar ao README ](README.md)

@@ -9,6 +9,8 @@ Precisamos de algumas útlimas modificações no programa para que ele fique pro
 Procfile
 ```web: flask run --host=0.0.0.0```
 
+# TODO: passo a passo heroku
+
 [Ir para o bonus 1 :arrow_right:](bonus01.md)
 
 [:leftwards_arrow_with_hook: Voltar ao README ](README.md)

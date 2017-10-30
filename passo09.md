@@ -37,6 +37,6 @@ def editar(id_tarefa):
 :heavy_check_mark: Mais uma funcionalidade feita e testada! Parabéns! Vamos coloca-la no ar?
 
 
-[Ir para o passo 11 :arrow_right:](passo11.md)
+[Ir para o passo 10 :arrow_right:](passo10.md)
 
 [:leftwards_arrow_with_hook: Voltar ao README ](README.md)
