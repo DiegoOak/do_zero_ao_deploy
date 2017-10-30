@@ -85,13 +85,16 @@ remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (5/5), done.
 
 ```
+Entre no repisotório que acabou de ser criado.
+
+`cd todoapp`
 
 Aproveite e já configure seu usuário git para este projeto, dentro do diretório recém clonado digite os seguintes comandos.
 
 ```bash
-$ git config --local user.email <emailutilizado@github.com>
+$ git config --local user.email seuemail@github.com
 
-$ git config --local user.name githubusername
+$ git config --local user.name seugithubusername
 ```
 
 "Voilá", já temos o projeto iniciado.
