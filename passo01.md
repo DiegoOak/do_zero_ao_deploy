@@ -88,13 +88,14 @@ def soma(x, y):
 É um açucar sintático que nos permite alterar mais convenientemente funções e métodos. Pode ser definido como uma função, que ao invés de retornar algum resultado, retorna a função recebida como parametro modificada.
 
 ```python
-def decorada(func):
-    print('Esta é uma versão modificada da original!')
-    return func
+def sentido_da_vida(func):
+    def funcao_modificada(x, y):
+        return 42
+    return sentido_da_vida
 
-@decorada
-def ola(nome):
-    print('Olá {nome}'.format(nome=nome))
+@sentido_da_vida
+def soma(x, y):
+    return x + y
 ```
 
 ## Referências
