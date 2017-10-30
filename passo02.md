@@ -97,6 +97,33 @@ Updated Pipfile.lock (bbaf41)!
 ```
 Preste atenção no --dev, pois esta dependência é somente durante o desenvolvimento, ou seja, não precisamos da pytest para o nosso programa funcionar.
 
+Acho que também será interessante testarmos nossa aplicação de forma manual por isso vamos adicionar a biblioteca `httpie`, que é um utilitário de linha de comando para auxiliar em requisições web. O comando de instalação é `pipenv install httpie --dev`.
+
+```bash
+$ pipenv install httpie --dev
+Installing httpie…
+Collecting httpie
+  Using cached httpie-0.9.9-py2.py3-none-any.whl
+Collecting Pygments>=2.1.3 (from httpie)
+  Using cached Pygments-2.2.0-py2.py3-none-any.whl
+Collecting requests>=2.11.0 (from httpie)
+  Using cached requests-2.18.4-py2.py3-none-any.whl
+Collecting chardet<3.1.0,>=3.0.2 (from requests>=2.11.0->httpie)
+  Using cached chardet-3.0.4-py2.py3-none-any.whl
+Collecting idna<2.7,>=2.5 (from requests>=2.11.0->httpie)
+  Using cached idna-2.6-py2.py3-none-any.whl
+Collecting urllib3<1.23,>=1.21.1 (from requests>=2.11.0->httpie)
+  Using cached urllib3-1.22-py2.py3-none-any.whl
+Collecting certifi>=2017.4.17 (from requests>=2.11.0->httpie)
+  Using cached certifi-2017.7.27.1-py2.py3-none-any.whl
+Installing collected packages: Pygments, chardet, idna, urllib3, certifi, requests, httpie
+Successfully installed Pygments-2.2.0 certifi-2017.7.27.1 chardet-3.0.4 httpie-0.9.9 idna-2.6 requests-2.18.4 urllib3-1.22
+
+Adding httpie to Pipfile's [dev-packages]…
+Locking [dev-packages] dependencies…
+Locking [packages] dependencies…
+Updated Pipfile.lock (53ad2c)!
+```
 
 Instalado as dependências, vamos salvar uma primeira versão do nosso projeto com o nosso andamento?
 

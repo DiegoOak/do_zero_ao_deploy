@@ -23,6 +23,8 @@ Com os testes passando, analise se é possível alguma refatoração.
 
 **5 - Vá para o passo 1**
 
+Todo o desenvolvimento será utilizando esta prática, portanto recomendo alguma leitura se achar que não entendeu. Caso sinta confortável, prossiga para o próximo passo.
+
 ![Círculo do TDD](tdd.png "Ciclo do tdd")
 
 ## Referências

@@ -40,6 +40,8 @@ script:
 
 Isto será extremamente útil nos póximos passos.
 
+`$ git add .travis.yml`
+
 :floppy_disk: Para terminar a integração com travis, salve a versão atual do projeto e veja a primeira contrução sendo realizada.
 
 `git commit -m "integração contínua"`

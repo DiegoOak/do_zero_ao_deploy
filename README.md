@@ -40,19 +40,17 @@ Ainda estão previstos alguns bonus como autenticação, CI(integração contín
 
 [Bonus 0: Integração contínua](bonus00.md)
 
-[Passo 5: Definindo o modelo](passo05.md)
+[Passo 5: Criando uma tarefa](passo05.md)
 
-[Passo 6: Criando uma tarefa](passo06.md)
+[Passo 6: Listando tarefas](passo06.md)
 
-[Passo 7: Listando tarefas](passo07.md)
+[Passo 7: Removendo tarefas](passo07.md)
 
-[Passo 8: Removendo tarefas](passo08.md)
+[Passo 8: Detalhando tarefas](passo08.md)
 
-[Passo 9: Detalhando tarefas](passo09.md)
+[Passo 9: Entregando tarefas](passo9.md)
 
-[Passo 10: Entregando tarefas](passo10.md)
-
-[Passo 11: Colocando a aplicação no ar](passo11.md)
+[Passo 10: Colocando a aplicação no ar](passo10.md)
 
 [Bonus 1: Containerizando sua aplicação](bonus01.md)
 
