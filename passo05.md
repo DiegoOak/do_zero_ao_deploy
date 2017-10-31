@@ -2,11 +2,11 @@
 
 Agora vamos começar a desenvolver nossa interface web.
 
-Continuaremos empregando o TDD, sendo assim vamos começar escrevendo os testes.
+Utilizaremos a técnica de TDD, sendo assim vamos começar escrevendo os testes.
 
 A primeira funcionalidade é a criação de um tarefa na "TODO list". Quando uma nova tarefa é criada corretamente, a mesma deve possuir status `False`, ou seja ainda não foi feita. O código de status da resposta deve ser 201.
 
-Crie um novo arquivo de testes para os testes do app. Estou utilizando um arquivo chamado `test_tarefa.py`.
+Crie um novo arquivo de testes para os testes do app. Estou utilizando um arquivo chamado `test_main.py`.
 
 Transformando estas espeficificações em código, resulta em algo como:
 
@@ -37,33 +37,33 @@ Um detalhe importante aqui é que o conteúdo retornado(resp.data) é uma sequen
 
 Obs: lembre-se de colocar as importações no topo do arquivo.
 
-:x: Oh não! Agora os testes estão quebrando novamente.
+:x: Oh não! Agora os testes estão quebrando.
 
 Vamos corrigi-los escrevendo a funcionalidade de criação de uma tarefa. Crie um arquivo `main.py` com o seguinte conteúdo.
 
 ```
 from flask import Flask, jsonify, request
-from modelo import criar_tarefa, memdb
 
 app = Flask('Meu app')
+
+tarefas = []
 
 
 @app.route('/task', methods=['POST'])
 def criar():
-    memdb.clear()
     # recebe o título e a descrição através do corpo da requisição
-    titulo = request.form['titulo']
-    descricao = request.form['descricao']
+    titulo = request.json['titulo']
+    descricao = request.json['descricao']
     # utiliza estes valores para criar uma tarefa
     # a função criar tarefa foi desenvolvida e testada no passo anterior
-    tarefa = criar_tarefa(titulo, descricao)
+    tarefa = {
+        'titulo': titulo,
+        'descricao': descricao,
+        'status': False
+    }
+    tarefas.append(tarefa)
     # retorna o resultado em um formato json
-    return jsonify({
-        'id': tarefa.id,
-        'titulo': tarefa.titulo,
-        'descricao': tarefa.descricao,
-        'status': tarefa.status,
-    })
+    return jsonify(tarefa)
 ```
 
 :x: ops! Parece que os testes ainda não estão passando!
@@ -73,38 +73,132 @@ O código de status da reuisição não é o correto.
 No retorno da função acrescente o valor 201 como visto abaixo.
 
 ```python
-    ...
-    return jsonify({
-        'id': tarefa.id,
-        'titulo': tarefa.titulo,
-        'descricao': tarefa.descricao,
-        'status': tarefa.status,
-    })
-    return jsonify({
-        'id': tarefa.id,
-        'titulo': tarefa.titulo,
-        'descricao': tarefa.descricao,
-        'status': tarefa.status,
-    }), 201
-    ...
+    return jsonify(tarefa), 201
+...
+
+...
 ```
 :heavy_check_mark: Testes passando! Vamos prosseguir. Preciso me assegurar que o caso negativo também esteja correto.
 
-```python
-from modelo import memdb
+E se eu me esquecer da descrição da tarefa?
 
-def test_erro_ao_criar_tarefa():
-    memdb.clear()
+```python
+def test_criar_tarefa_sem_descricao():
     with app.test_client() as c:
-        resp = c.post('/task', data={'titulo': 'titulo'})
+        # o código de status deve ser 400 indicando um erro do cliente
+        resp = c.post('/task', data=json.dumps({'titulo': 'titulo'}),
+                      content_type='application/json')
         assert resp.status_code == 400
 ```
 
-:warning: Um aviso importante: As importações sempre virão no início do arquivo.
+Vamos corrigir isto, o código ficará assim:
+
+```python
+from flask import Flask, jsonify, request, abort
+
+app = Flask('Meu app')
+
+tarefas = []
+
+
+@app.route('/task', methods=['POST'])
+def criar():
+    # recebe o título e a descrição através do corpo da requisição
+    titulo = request.json['titulo']
+    descricao = request.json.get('descricao')
+    if not descricao:
+        abort(400)
+    # utiliza estes valores para criar uma tarefa
+    # a função criar tarefa foi desenvolvida e testada no passo anterior
+    tarefa = {
+        'titulo': titulo,
+        'descricao': descricao,
+        'status': False
+    }
+    tarefas.append(tarefa)
+    # retorna o resultado em um formato json
+    return jsonify(tarefa), 201
+
+```
 
 A faixa de código de status que vai de 400 até 499 é destinada a erros do cliente, e neste caso ele está tentando enviar um válor inválido.
 
-:heavy_check_mark: Verifique se os testes continuam passando e vamos para o proximo passo.
+:heavy_check_mark: Verifique se os testes agora passam. E se eu não passar o título? Precisamos corrigir isto também.
+
+Um teste para esta condição seria:
+
+```python
+def test_criar_tarefa_sem_titulo():
+    with app.test_client() as c:
+        # o código de status deve ser 400 indicando um erro do cliente
+        resp = c.post('/task', data=json.dumps({'descricao': 'descricao'}),
+                      content_type='application/json')
+        assert resp.status_code == 400
+```
+
+e o código final
+
+```python
+from flask import Flask, jsonify, request, abort
+
+app = Flask('Meu app')
+
+tarefas = []
+
+
+@app.route('/task', methods=['POST'])
+def criar():
+    # recebe o título e a descrição através do corpo da requisição
+    titulo = request.json.get('titulo')
+    descricao = request.json.get('descricao')
+    if not descricao or not titulo:
+        abort(400)
+    # utiliza estes valores para criar uma tarefa
+    # a função criar tarefa foi desenvolvida e testada no passo anterior
+    tarefa = {
+        'titulo': titulo,
+        'descricao': descricao,
+        'status': False
+    }
+    tarefas.append(tarefa)
+    # retorna o resultado em um formato json
+    return jsonify(tarefa), 201
+```
+
+TODO: testar de forma manual
+
+:heavy_check_mark: Parabéns, temos a nossa primeira funcionalidade adicionada ao sistema!
+
+Antes de avançar para o próximo passo salve esta versão do código.
+
+Primeiro passo é checar o que foi feito até agora:
+```bash
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	main.py
+	test_main.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+Vemos dois arquivos não rastreados, precisamos avisar ao controle de versão que monitore estes arquivos.
+
+`$ git ad main.py test_main.py`
+
+:floppy_disk: Agora vamos marcar esta versão como salva.
+
+`git commit -m "inserindo uma tarefa"`
+
+:octocat: Por fim envie ao github a versão atualizada do projeto.
+
+`git push`
+
+:sunglasses: Parabéns! Seu primeiro passo no desenvolvimento da nossa lista de afazeres está pronto? Mas e agora, como sei se uma tarefa foi realmente adicionada? Vamos ao próximo passo.
 
 [Ir para o passo 6 :arrow_right:](passo06.md)
 
