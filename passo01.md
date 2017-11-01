@@ -1,8 +1,8 @@
 # Primeiros passos com python
 
-Infelizmente esse tutorial foi pensado para ser ministrado em apenas três horas, o que nos deixa com pouco tempo para aprofundar na linugagem, aqui serão apresentados apenas alguns conceitos que serão necessários para o restante do tutorial.
+Infelizmente esse tutorial foi pensado para ser ministrado em apenas três horas, o que nos deixa com pouco tempo para aprofundar na linguagem, aqui serão apresentados apenas alguns conceitos que serão necessários para o restante do tutorial.
 
-Caso tenha chegado aqui por outros meios que não a Semana de Tecnologia, e não tenha conhecimento na linguagem, recomando dar uma parada, e assistir as excelentes aulas do Professor Masanori. O [python para zumbis](https://www.youtube.com/watch?v=6La690qlH5w&list=PLUukMN0DTKCtbzhbYe2jdF4cr8MOWClXc) tem sido uma excelente porta para muitas pessoas.
+Caso tenha chegado aqui por outros meios que não a Semana de Tecnologia, e não tenha conhecimento na linguagem, recomendo dar uma parada, e assistir as excelentes aulas do Professor Masanori. O [python para zumbis](https://www.youtube.com/watch?v=6La690qlH5w&list=PLUukMN0DTKCtbzhbYe2jdF4cr8MOWClXc) tem sido uma excelente porta para muitas pessoas.
 
 Neste capítulo experimente abrir o console python através do comando `python3` e teste os comandos enquanto lê.
 
@@ -78,7 +78,7 @@ São conjutos de elementos armazenados em uma estrutura de dados similar a uma l
 
 >>> lista = [] # inicializando uma lista vazia
 
->>> lista.append(1) # estou armazenando um dicionário em uma lista
+>>> lista.append(1) # estou armazenando um elemento em uma lista
 
 >>> lista[0] # acessa o primeiro elemento da lista(inicia-se por 0 a posição)
 
@@ -99,7 +99,7 @@ O laço de repetição da linguagem Python é através de iteração de coleçõ
 
 É uma sintaxe diferente para criação de uma nova lista com base em outra e inclusive nos é permitido fazer filtro dos elementos.
 
-Algumas operações divrtidas são.
+Algumas operações divertidas são.
 
 ```python
 >>> lista = [1, 2, 3, 4]
@@ -109,7 +109,7 @@ Algumas operações divrtidas são.
 >>> print(pares)
 
 >>> # cria uma nova lista com o quadrado dos números originais.
->>> # dessa vez eu não filtrei os elementos(if), porém realizei a operção de exponenciação.
+>>> # dessa vez eu não filtrei os elementos(if), porém realizei a operação de exponenciação.
 >>> quadrado = [numero ** 2 for numero in lista]
 >>> print(quadrado)
 
