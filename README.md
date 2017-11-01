@@ -27,6 +27,9 @@ Ainda estão previstos alguns bonus como autenticação, CI(integração contín
 
 - pipenv
 
+- conhecimento mínimo de programação
+
+
 
 ## Sumário
 

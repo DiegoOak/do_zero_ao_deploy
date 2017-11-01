@@ -18,18 +18,15 @@ Como usuário devo ser capaz de:
 
 Mais alguns detalhes especificados pelo cliente:
 
-- quando listadas, as tarefas não devem exibir suas descrições
-
-- a listagem deve exibir primeiro as tarefas não concluídas e em seguida as concluídas
-
-- toda tarefa possui um titulo, uma descrição e o status
+- toda tarefa possui um titulo, uma descrição e o estado da entrega
 
 - uma tarefa possui um identificador único
 
-- o status é algo opcional na criação da tarefa e por padrão False(Não realizado)
+- o estado da entrega deve ser por padrão False(Não realizado)
 
 O que precisamos levantar com isto em mente? Qual o primeiro código que devemos escrever? Qual será nossa arquitetura? Qual banco de dados utilizar? Essas informações são suficientes para meu caso de uso?
 
+Parece complexo? Vamos tentar entender o problema e procura a solução da melhor maneira possível.
 
 [Ir para o passo 4 :arrow_right:](passo04.md)
 

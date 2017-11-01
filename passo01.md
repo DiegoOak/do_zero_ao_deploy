@@ -4,12 +4,17 @@ Infelizmente esse tutorial foi pensado para ser ministrado em apenas três horas
 
 Caso tenha chegado aqui por outros meios que não a Semana de Tecnologia, e não tenha conhecimento na linguagem, recomando dar uma parada, e assistir as excelentes aulas do Professor Masanori. O [python para zumbis](https://www.youtube.com/watch?v=6La690qlH5w&list=PLUukMN0DTKCtbzhbYe2jdF4cr8MOWClXc) tem sido uma excelente porta para muitas pessoas.
 
+Neste capítulo experimente abrir o console python através do comando `python3` e teste os comandos enquanto lê.
 
 ## Olá mundo
 
 Olá Mundo em python é tão simples como `print('Olá mundo')` por isso um Olá mundo mais pythonico seria `import antigravity`.
 
-Python é conhecido por suas baterias incluídas, e até mesmo o Olá mundo pode ser importado `import __hello__`.
+Python é conhecido por suas baterias incluídas, ou seja, muita coisa já vem junto com ele, e até mesmo o "Olá mundo" pode ser importado `import __hello__`.
+
+```python
+>>> import __hello__
+```
 
 ## Por Favor e Obrigado
 
@@ -45,7 +50,7 @@ A função "dir" lista todos os atributos e métodos de uma determinada instânc
 
 ## Estrutura de chave e valor
 
-Python possui por padrão uma estrutura de dados de array associativo, que é chamado dicionário. Esta estrutura armazena valores associando uma chave a seu conteúdo. Veja abaixo algumas tarefas rudimentares com esta estrutura.
+Python possui por padrão uma estrutura de dados que é chamado dicionário. Esta estrutura armazena valores associando uma chave a seu conteúdo. Veja abaixo algumas tarefas rudimentares com esta estrutura.
 
 ```python
 
@@ -65,6 +70,22 @@ Python possui por padrão uma estrutura de dados de array associativo, que é ch
 
 ```
 
+## Listas
+
+São conjutos de elementos armazenados em uma estrutura de dados similar a uma lista. Estas listas possuem algumas operações que vamos explorar abaixo.
+
+```python
+
+>>> lista = [] # inicializando uma lista vazia
+
+>>> lista.append(1) # estou armazenando um dicionário em uma lista
+
+>>> lista[0] # acessa o primeiro elemento da lista(inicia-se por 0 a posição)
+
+>>> lista.remove(1) # procura pelo elemento 1 para ser removido da lista
+
+```
+
 ## Percorrendo estruturas
 
 O laço de repetição da linguagem Python é através de iteração de coleções. Tudo que pode ser percorrível pode ser utilizado em uma estrutura de repetição.
@@ -72,6 +93,27 @@ O laço de repetição da linguagem Python é através de iteração de coleçõ
 ```python
 >>> for tarefa in tarefas:
         print(tarefa)
+```
+
+## Compreensão de listas
+
+É uma sintaxe diferente para criação de uma nova lista com base em outra e inclusive nos é permitido fazer filtro dos elementos.
+
+Algumas operações divrtidas são.
+
+```python
+>>> lista = [1, 2, 3, 4]
+
+>>> # percorre a lista e somente adiciona a nova lista chamada pares os valores pares, que o resto da divisão por 2 é igual a 0(numero % 2 == 0).
+>>> pares = [numero for numero in lista if numero % 2 == 0]
+>>> print(pares)
+
+>>> # cria uma nova lista com o quadrado dos números originais.
+>>> # dessa vez eu não filtrei os elementos(if), porém realizei a operção de exponenciação.
+>>> quadrado = [numero ** 2 for numero in lista]
+>>> print(quadrado)
+
+
 ```
 
 ## Funções
@@ -97,6 +139,8 @@ def sentido_da_vida(func):
 def soma(x, y):
     return x + y
 ```
+
+Ficaram muitas dúvidas? Sugiro que veja o curso "Python para zumbis" que foi indicado acima e também os links na referência, eles vão ajudar a se sentir mais confiante com a linguagem. Quando se sentir preparado, avance para o passo 2.
 
 ## Referências
 

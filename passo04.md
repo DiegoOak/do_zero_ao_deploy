@@ -1,5 +1,9 @@
 # Desenvolvimento guiado por testes (TDD)
 
+:kissing_heart: Sim! Você está prestes a aprender algo que vai mudar a sua vida como desenvolvedor. Aprenderemos como escrever um código guiado por testes, o que ajudara a pensar em como vamos estruturar nosso código e ao fim teremos certeza que tudo que o cliente pediu estará contemplado.
+
+Ainda em dúvida de como funcionam os testes? Pense em um código que vai testar o seu código. Assim você terá certeza que tudo aquilo que desenvolveu está atendendo ao objetivo.
+
 Desenvolvimento guiado por testes(Test Driven Development) é uma técnica de desenvolvimento de software que baseia em um ciclo curto de repetições: Primeiramente o desenvolvedor escreve um caso de teste automatizado que define uma melhoria desejada ou uma nova funcionalidade. Então, é produzido código que possa ser validado pelo teste para posteriormente o código ser refatorado para um código sob padrões aceitáveis.
 
 É um ciclo de desenvolvimento que segue os seguintes passos:
@@ -7,7 +11,7 @@ Desenvolvimento guiado por testes(Test Driven Development) é uma técnica de de
 **1 - Adicione um teste**
 
 Normalmente analisamos alguma funcionalidade que desejamos implementar ou validar e escrevemos um teste que será executado automaticamente relacionado aquela funcionalidade.
-Ainda que uma funçãoi/classe não exista, devemos escrever o comportamento esperado da mesma.
+Ainda que uma função/classe não exista, devemos escrever o comportamento esperado da mesma.
 
 **2 - Verifique se algum teste quebrou**
 
@@ -19,11 +23,13 @@ Escreva código necessário para que seu teste seja contemplado, mas evite escre
 
 **4 - Refatore seu código**
 
-Com os testes passando, analise se é possível alguma refatoração.
+Com os testes passando, analise se é possível alguma refatoração(melhoria).
 
 **5 - Vá para o passo 1**
 
-Todo o desenvolvimento será utilizando esta prática, portanto recomendo alguma leitura se achar que não entendeu. Caso sinta confortável, prossiga para o próximo passo.
+Todo o desenvolvimento será utilizando esta prática, portanto terá muito exercício prático para entender como isto funciona.
+
+Abaixo temos algumas referências para estudos futuros.
 
 ![Círculo do TDD](tdd.png "Ciclo do tdd")
 

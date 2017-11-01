@@ -1,4 +1,8 @@
-# Integração contínua
+# Integração contínua (Bonus)
+
+:scream: Que isso?
+
+Não se assuste jovem padawan, é apenas um nome que resumidamente quer dizer: "Tenha certeza de forma automatizada que seu código se integra com o já existente sem problemas".
 
 O desenvolvedor integra o código alterado e/ou desenvolvido ao projeto principal na mesma frequência com que as funcionalidades são desenvolvidas, sendo feito muitas vezes.
 
@@ -8,6 +12,8 @@ Mas como garantir que minha alteração não impacta com o restante do projeto, 
 Como garantir que a qualidade do código foi mantida?
 
 Utilizaremos o serviço [travis](https://travis-ci.org/) para checar que nosso código não quebra a "build", ou seja, quando integrado o novo código ao sistema, todo o sistema continua funcional.
+
+No nosso caso, para verificarmos a integração, rodaremos todos os testes do sistema, para assegurar que não tivemos problemas.
 
 ## Passo a passo
 
@@ -54,7 +60,6 @@ Isto será extremamente útil nos póximos passos.
 ## Referências
 
 - [Integração contínua: uma introdução ao assunto](http://www.devmedia.com.br/integracao-continua-uma-introducao-ao-assunto/28002)
-
 
 
 [Ir para o passo 5 :arrow_right:](passo05.md)

@@ -36,6 +36,8 @@ Ferramenta recente e moderna, ajuda no gerenciamento de ambientes isolados e na 
 
 Uma vantagem da utilização desta ferramenta é que em ambientes virtuais, não precisamos de permissão de superusuário para instalação de ferramentas e não modificamos as bilbiotecas contidas no sistema.
 
+Outra vantagem é a separação do ambiente por projeto, o que evita conflito entre depêndencias dos mesmos.
+
 Esta ferramenta também não vem por padrão no sitema e pode ser instalada através do comando `sudo pip3 install pipenv`.
 
 Para checar sua instalação digite o comando `pipenv --version`.
@@ -62,7 +64,7 @@ git version 2.14.2
 
 ## Iniciando o projeto
 
-O primeiro passo para desenvolvimento do nosso aplicativo web é cria-lo utilizando um controle de versão. para este minicurso optei pelo controle de versão mais popular hoje em dia que se chama git.
+O primeiro passo para desenvolvimento do nosso aplicativo web é cria-lo utilizando um controle de versão. Para este minicurso optei pelo controle de versão mais popular hoje em dia que se chama git.
 
 Aproveitando esta escolha, como o Github é grátis e também o mais conhecido, vamos hospedar o projeto lá(vai ajudar com algumas integrações mais tarde.)
 

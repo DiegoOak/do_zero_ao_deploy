@@ -1,8 +1,8 @@
 # Utilizando o pipenv para instalar dependências
 
-Única bilbioteca que iremos precisar no nosso projeto é o micro framework flask. Para instalá-lo vamos utilizar o pipenv.
+Única bilbioteca que iremos precisar no nosso projeto é o flask. Para instalá-lo vamos utilizar o pipenv.
 
-O [flask](http://flask.pocoo.org/) é um micro framework web bastante conhecido por sua arquitetura minimalista.
+O [flask](http://flask.pocoo.org/) é uma ferramenta para desenvolvimento web bastante conhecido por sua arquitetura minimalista.
 
 Para instalar o flask, utilize o comando `pipenv install flask`
 
@@ -75,7 +75,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-Já dizia Uncle Bob, "Código sem testes é um código legado.". Vamos então instalar o pytest, que é uma ferramenta que auxilia na execução de testes.
+Já dizia Kent Beck, "Código sem testes é um código legado.". Vamos então instalar o pytest, que é uma ferramenta que auxilia na execução de testes.
+
+Não sabe como funciona estes testes? Não se preocupe, até o final do tutorial você já deve estar familiarizado com os mesmos.
 
 O comando para instalção é `pipenv install pytest --dev`.
 
