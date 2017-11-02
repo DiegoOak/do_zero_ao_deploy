@@ -79,7 +79,7 @@ Já dizia Kent Beck, "Código sem testes é um código legado.". Vamos então in
 
 Não sabe como funciona estes testes? Não se preocupe, até o final do tutorial você já deve estar familiarizado com os mesmos.
 
-O comando para instalção é `pipenv install pytest --dev`.
+O comando para instalação é `pipenv install pytest --dev`.
 
 ```bash
 $ pipenv install pytest --dev
