@@ -48,7 +48,7 @@ Neste momento seu diretório deve estar assim:
 └── README.md
 ```
 
-Vamos testar nossa instalção então?
+Vamos testar nossa instalação então?
 
 ```bash
 $ python3
