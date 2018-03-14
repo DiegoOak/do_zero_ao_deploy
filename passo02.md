@@ -35,9 +35,9 @@ Locking [packages] dependencies…
 Updated Pipfile.lock (d3d473)!
 ```
 
-Aqui podemos observar que foi criado um ambiente virtual e a instalação da biblioteca ocorreu neste ambiente, também podemos notar que outras bilbiotecas que são depêndencias do flask, foram instaladas.
+Aqui podemos observar que foi criado um ambiente virtual e a instalação da biblioteca ocorreu neste ambiente, também podemos notar que outras bilbiotecas que são dependências do flask, foram instaladas.
 
-Dois novos arquivos foram criados para controle das depêndencias, `Pipfile` e `Pipfile.lock`.
+Dois novos arquivos foram criados para controle das dependências, `Pipfile` e `Pipfile.lock`.
 
 Neste momento seu diretório deve estar assim:
 ```
